@@ -1,0 +1,61 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Product {
+  """id of the product"""
+  id: String!
+
+  """name of the product"""
+  name: String!
+
+  """name of the product manufacturer"""
+  manufacturer: String!
+
+  """quatity of the product"""
+  quantity: Int!
+
+  """value of the product"""
+  value: Float!
+}
+
+type Query {
+  products: [Product!]!
+  productsExemple: [Product!]!
+  product(id: String!): Product!
+}
+
+type Mutation {
+  createProduct(productCreateInput: ProductCreateInput!): Product!
+  updateProduct(productUpdateInput: ProductUpdateInput!): Product!
+  removeProduct(id: String!): Product!
+}
+
+input ProductCreateInput {
+  """name of the product"""
+  name: String!
+
+  """manufacturer of the product"""
+  manufacturer: String!
+
+  """quantity of the product"""
+  quantity: Int!
+
+  """value of the product"""
+  value: Float!
+}
+
+input ProductUpdateInput {
+  """name of the product"""
+  name: String
+
+  """manufacturer of the product"""
+  manufacturer: String
+
+  """quantity of the product"""
+  quantity: Int
+
+  """value of the product"""
+  value: Float
+  id: String!
+}
